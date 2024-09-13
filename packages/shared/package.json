@@ -1,0 +1,15 @@
+{
+  "name": "@ws/shared",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.build.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "es-toolkit": "^1.17.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@ws/db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.build.json",
+    "generate:dev": "dotenv -e ../../.env.development -- drizzle-kit generate",
+    "generate:test": "dotenv -e ../../.env.test drizzle-kit generate",
+    "generate:prod": "dotenv -e ../../.env.production drizzle-kit migrate",
+    "studio": "dotenv -e ../../.env.development -- drizzle-kit studio",
+    "push:dev": "dotenv -e ../../.env.development -- drizzle-kit push",
+    "push:test": "cross-env NODE_ENV=test drizzle-kit push",
+    "seed:dev": "dotenv -e ../../.env.development -- ts-node ./scripts/seed.ts",
+    "seed:test": "dotenv -e ../../.env.test -- ts-node ./scripts/seed.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "drizzle-orm": "^0.33.0",
+    "postgres": "^3.4.4"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.24.2"
+  }
+}
